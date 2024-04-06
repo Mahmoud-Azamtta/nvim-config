@@ -13,25 +13,25 @@ return {
 
     local on_attach = function(client, bufnr)
       opts.desc = "Show LSP references"
-      keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
+      keymap.set("n", "<leader>lr", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
       opts.desc = "Go to declarations"
-      keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declarion
+      keymap.set("n", "<leader>lD", vim.lsp.buf.declaration, opts) -- go to declarion
 
       opts.desc = "Show LSP definition"
-      keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definition
+      keymap.set("n", "<leader>ld", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definition
 
       opts.desc = "Show LSP impelementaitons"
-      keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp lsp impelementaitons
+      keymap.set("n", "<leader>li", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp lsp impelementaitons
 
       opts.desc = "Show LSP type definition"
-      keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+      keymap.set("n", "<leader>lt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
       opts.desc = "See available code actions"
-      keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode only code actions for the selected part will appear
+      keymap.set({ "n", "v" }, "<leader>lc", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode only code actions for the selected part will appear
 
       opts.desc = "Smart rename"
-      keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+      keymap.set("n", "<leader>ln", vim.lsp.buf.rename, opts) -- smart rename
 
       opts.desc = "Show buffer diagnostics"
       keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show diagnostics for file
@@ -49,7 +49,7 @@ return {
       keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under the cursor
 
       opts.desc = "Restart LSP"
-      keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- restart the lsp
+      keymap.set("n", "<leader>lR", ":LspRestart<CR>", opts) -- restart the lsp
     end
 
     local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -83,6 +83,11 @@ return {
     })
 
     lspconfig["pyright"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    lspconfig["csharp_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })

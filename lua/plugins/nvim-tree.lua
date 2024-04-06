@@ -9,6 +9,7 @@ return {
     local api = require("nvim-tree.api")
     vim.cmd([[ highlight NvimTreeGitNew guifg=#b16286 ]])
     vim.cmd([[ highlight NvimTreeGitNewIcon guifg=#b16286 ]])
+    vim.cmd([[ highlight NvimTreeGitDirty guifg=##FB4934 ]])
 
     nvimTree.setup({
       -- hijack_cursor = true,
@@ -17,14 +18,15 @@ return {
       },
       view = {
         width = 40,
+        signcolumn = "yes",
       },
       renderer = {
         group_empty = true,
         indent_markers = {
           enable = true,
-          inline_arrows = false,
+          inline_arrows = true,
           icons = {
-            corner = "└",
+            corner = "╰", -- └
             edge = "│",
             item = "│",
             bottom = "─",
@@ -34,8 +36,8 @@ return {
         icons = {
           glyphs = {
             folder = {
-              arrow_closed = "",
-              arrow_open = "",
+              arrow_closed = "", --
+              arrow_open = "", --
             },
           },
         },

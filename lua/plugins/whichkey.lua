@@ -12,12 +12,15 @@ return {
       f = "Telescope",
       l = "LSP",
       b = "Buffers",
+      e = "Explorer",
+      g = "Git",
+      ["/"] = "Comment current line/selection",
     }, { prefix = "<leader>" })
     wk.setup({
       window = {
         border = "none",
         position = "bottom",
-        margin = { 1, 20, 1, 20 },
+        margin = { 1, 30, 1, 30 },
         padding = { 2, 2, 2, 2 },
         winblend = 10,
         zindex = 1000,
@@ -28,7 +31,7 @@ return {
         spacing = 3,
         align = "center",
       },
-      show_help = false,
+      show_help = true,
     })
   end,
 }

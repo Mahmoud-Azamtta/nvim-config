@@ -9,6 +9,11 @@ return {
           color = "#f7c81e",
           name = "JavaScript",
         },
+        ["cjs"] = {
+          icon = "",
+          color = "#f7c81e",
+          name = "JavaScript",
+        },
         ["toml"] = {
           icon = "",
           color = "#888888",

@@ -6,9 +6,9 @@ return {
       signs = {
         add = { text = "│" },
         change = { text = "│" },
-        delete = { text = "_" },
-        topdelete = { text = "‾" },
-        changedelete = { text = "~" },
+        delete = { text = "" },
+        topdelete = { text = "" },
+        changedelete = { text = "│" },
         untracked = { text = "┆" },
       },
       signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
@@ -45,5 +45,10 @@ return {
         enable = false,
       },
     })
+    local opts = { noremap = true, silent = true }
+    opts.desc = "Preview hunk"
+    vim.keymap.set("n", "<leader>gh", "<cmd>Gitsigns preview_hunk_inline<CR>", opts)
+    opts.desc = "Toggle line blame"
+    vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", opts)
   end,
 }

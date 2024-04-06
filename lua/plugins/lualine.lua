@@ -14,32 +14,32 @@ local colors = {
 local lualine_theme = {
   normal = {
     a = { bg = colors.light_gray, fg = colors.black, gui = "bold" },
-    b = { bg = colors.inactive_gray, fg = colors.white },
+    b = { bg = colors.inactive_gray, fg = colors.darkder_white },
     c = { bg = colors.black, fg = colors.darker_white },
   },
   insert = {
     a = { bg = colors.green, fg = colors.black, gui = "bold" },
-    b = { bg = colors.inactive_gray, fg = colors.white },
+    b = { bg = colors.inactive_gray, fg = colors.darker_white },
     c = { bg = colors.black, fg = colors.darker_white },
   },
   visual = {
     a = { bg = colors.red, fg = colors.black, gui = "bold" },
-    b = { bg = colors.inactive_gray, fg = colors.white },
+    b = { bg = colors.inactive_gray, fg = colors.darker_white },
     c = { bg = colors.black, fg = colors.darker_white },
   },
   replace = {
     a = { bg = colors.yellow, fg = colors.black, gui = "bold" },
-    b = { bg = colors.inactive_gray, fg = colors.white },
+    b = { bg = colors.inactive_gray, fg = colors.darkder_white },
     c = { bg = colors.black, fg = colors.darker_white },
   },
   command = {
     a = { bg = colors.light_blue, fg = colors.black, gui = "bold" },
-    b = { bg = colors.inactive_gray, fg = colors.white },
+    b = { bg = colors.inactive_gray, fg = colors.darkder_white },
     c = { bg = colors.black, fg = colors.darker_white },
   },
   inactive = {
     a = { bg = colors.inactive_gray, fg = colors.black, gui = "bold" },
-    b = { bg = colors.inactive_gray, fg = colors.white },
+    b = { bg = colors.inactive_gray, fg = colors.darkder_white },
     c = { bg = colors.inactive_gray, fg = colors.darker_white },
   },
 }

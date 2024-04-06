@@ -20,7 +20,7 @@ return {
     local buffers = require("bufferline")
     buffers.setup({
       options = {
-        separator_style = "slant",
+        separator_style = "thick",
         offsets = {
           {
             -- filetype = "NvimTree",
@@ -35,19 +35,41 @@ return {
         fill = {
           bg = "#1c1c1c",
         },
+        background = {
+          bg = "#282828", -- #32302f
+        },
+        buffer_visible = {
+          bg = "#282828",
+        },
         separator = {
           fg = "#1c1c1c",
+          bg = "#282828",
         },
         separator_selected = {
           fg = "#1c1c1c",
+          bg = "#282828",
         },
         separator_visible = {
           fg = "#1c1c1c",
+          bg = "#282828",
         },
-        buffer_selected = {
-          bold = true,
-          italic = true,
-          fg = "#d65d0e",
+        indicator_selected = {
+          fg = "#fe8019",
+        },
+        indicator_visible = {
+          bg = "#282828",
+        },
+        modified = {
+          bg = "#282828",
+        },
+        modified_visible = {
+          bg = "#282828",
+        },
+        close_button = {
+          bg = "#282828",
+        },
+        close_button_visible = {
+          bg = "#282828",
         },
       },
     })

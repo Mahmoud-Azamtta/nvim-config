@@ -40,7 +40,7 @@ return {
         [[  ⠀⠀⠀⠀⠀⢀⣴⣯⡵⠞⠋⠁⠈⠛⠷⣦⣄⠉⠛⠀⠀⠛⢉⣠⣴⠾⠛⠉⠀⠀⠀⠀⠈⠙⠻⠦⡀⠀⠀⠀⠀⠀  ]],
         [[  ⠀⠀⠀⠀⠀⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⢶⣤⣴⡾⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ]],
         [[  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ]],
-        -- [[  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀  ]],
+        [[  ⠀⠀⠀⠀⠀⠀     Neovim is freedom   ⠀⠀⠀⠀  ⠀⠀⠀  ]],
       }
       dashboard.section.buttons.val = {
         -- dashboard.button("f", " " .. " Find file", "<cmd> Telescope find_files <cr>"),
@@ -87,7 +87,7 @@ return {
         end,
       })
       vim.cmd("highlight AlphaHeader guifg=#d65d0e")
-      vim.cmd("highlight AlphaButtons guifg=#bdae93")
+      vim.cmd("highlight AlphaButtons guifg=#ebdbb2") -- #fbf1c7
       vim.cmd("highlight AlphaFooter guifg=#b16286")
       if vim.o.filetype == "lazy" then
         vim.cmd.close()

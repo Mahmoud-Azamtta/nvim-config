@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.python3_host_prog = "C:\\Users\\m7mod\\AppData\\Local\\Programs\\Python\\Python311\\python.exe"
 vim.g.clipboard = {
   copy = {
     ["+"] = "win32yank.exe -i --crlf",
@@ -27,8 +28,30 @@ vim.opt.pumblend = 15
 vim.opt.pumheight = 10
 vim.opt.scrolloff = 10
 
+-- [[ Blinking cursor ]] --
+-- vim.opt.guicursor = {
+--   "n-v-c:block",
+--   "i-ci-ve:ver25",
+--   "r-cr:hor20",
+--   "o:hor50",
+--   "a:blinkwait700-blinkoff400-blinkon250",
+--   "sm:block-blinkwait175-blinkoff150-blinkon175",
+-- }
+
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set clipboard+=unnamedplus")
+
+vim.api.nvim_create_augroup("FileTypeIndentation", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = "FileTypeIndentation",
+  pattern = { "cs", "python" },
+  callback = function()
+    print("Tab is 4 spaces in this file!")
+    vim.cmd("setlocal tabstop=4")
+    vim.cmd("setlocal softtabstop=4")
+    vim.cmd("setlocal shiftwidth=4")
+  end,
+})

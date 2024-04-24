@@ -8,7 +8,7 @@ local colors = {
   gray = "#504945", -- second part
   light_gray = "#A89984", -- first part, (normal)
   yellow = "#FABD2F", -- (replace) mode
-  inactive_gray = "#282828",
+  inactive_gray = "#3c3836",
 }
 
 local lualine_theme = {
@@ -72,14 +72,17 @@ return {
         theme = lualine_theme,
         disabled_filetypes = { "alpha" },
         globalstatus = true,
+        section_separators = { left = "", right = "" }, --   
+        component_separators = "|",
       },
       sections = {
         lualine_a = {
-          "mode",
+          { "mode", separator = { left = "", right = "" } },
         },
         lualine_b = {
-          { "branch", icon = "󰘬" },
-          "diff",
+          { "branch", icon = "󰘬", separator = { left = "", right = "" } },
+          { "diff", separator = { left = "", right = "" } },
+          { separator = { left = "", right = "" } },
         },
         lualine_c = {
           "filename",
@@ -95,7 +98,7 @@ return {
         },
         lualine_x = { "fileformat", "filetype" },
         lualine_y = { "progress" },
-        lualine_z = { getTime },
+        lualine_z = { { getTime, separator = { left = "", right = "" } } },
       },
     })
   end,

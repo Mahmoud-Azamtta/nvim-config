@@ -27,6 +27,8 @@ vim.opt.relativenumber = true
 vim.opt.pumblend = 15
 vim.opt.pumheight = 10
 vim.opt.scrolloff = 10
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 -- [[ Blinking cursor ]] --
 -- vim.opt.guicursor = {

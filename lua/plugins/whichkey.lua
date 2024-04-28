@@ -7,6 +7,10 @@ return {
   end,
   opts = {},
   config = function()
+    vim.cmd([[
+      highlight WhichKeyFloat guibg=#1c1c1c
+      highlight WhichKeyBorder guibg=#1c1c1c guifg=#282828 
+    ]])
     local wk = require("which-key")
     wk.register({
       f = "Telescope",
@@ -18,7 +22,7 @@ return {
     }, { prefix = "<leader>" })
     wk.setup({
       window = {
-        border = "none",
+        border = "single",
         position = "bottom",
         margin = { 1, 30, 1, 30 },
         padding = { 2, 2, 2, 2 },

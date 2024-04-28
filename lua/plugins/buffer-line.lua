@@ -17,17 +17,22 @@ return {
       highlight BufferLineOffsetSeparator guifg=#282828
       highlight BufferLineOffsetAreas guifg=#282828
     ]])
+
+    vim.cmd([[
+      highlight FileExplorer guibg=none
+    ]])
+
     local buffers = require("bufferline")
     buffers.setup({
       options = {
         separator_style = "thick",
         offsets = {
           {
-            -- filetype = "NvimTree",
-            filetype = "neo-tree",
-            text = "File Explorer",
+            filetype = "NvimTree",
+            text = "  Explorer",
             text_align = "center",
             separator = true,
+            highlight = "FileExplorer",
           },
         },
       },
@@ -36,40 +41,41 @@ return {
           bg = "#1c1c1c",
         },
         background = {
-          bg = "#282828", -- #32302f
+          bg = "#1c1c1c", -- #32302f
         },
         buffer_visible = {
-          bg = "#282828",
+          -- bg = "#282828",
+          bg = "#1c1c1c",
         },
         separator = {
-          fg = "#1c1c1c",
-          bg = "#282828",
+          fg = "#282828",
+          bg = "#1c1c1c",
         },
         separator_selected = {
-          fg = "#1c1c1c",
-          bg = "#282828",
+          fg = "#282828",
+          bg = "#1c1c1c",
         },
         separator_visible = {
-          fg = "#1c1c1c",
-          bg = "#282828",
+          fg = "#282828",
+          bg = "#1c1c1c",
         },
         indicator_selected = {
           fg = "#fe8019",
         },
         indicator_visible = {
-          bg = "#282828",
+          bg = "#1c1c1c",
         },
         modified = {
-          bg = "#282828",
+          bg = "#1c1c1c",
         },
         modified_visible = {
-          bg = "#282828",
+          bg = "#1c1c1c",
         },
         close_button = {
-          bg = "#282828",
+          bg = "#1c1c1c",
         },
         close_button_visible = {
-          bg = "#282828",
+          bg = "#1c1c1c",
         },
       },
     })

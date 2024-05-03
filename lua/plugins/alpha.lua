@@ -56,11 +56,7 @@ return {
           " " .. " Recent files",
           "<cmd>lua require('telescope.builtin').oldfiles({ cwd = '~/Github/' })<CR>"
         ),
-        dashboard.button(
-          "g",
-          " " .. " Find text",
-          "<cmd>lua require('telescope.builtin').live_grep({ cwd = '~/Github/' })<CR>"
-        ),
+        dashboard.button("s", " " .. " Open Session", "<cmd>SessionRestore<CR>"),
         dashboard.button(
           "c",
           " " .. " Config",

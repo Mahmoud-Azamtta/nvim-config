@@ -77,8 +77,15 @@ return {
         close_button_visible = {
           bg = "#1c1c1c",
         },
+        pick_visible = {
+          bg = "#1c1c1c",
+        },
+        pick = {
+          bg = "#1c1c1c",
+        },
       },
     })
+
     vim.keymap.set("n", "H", "<cmd>bp<CR>", { noremap = true, silent = true })
     vim.keymap.set("n", "L", "<cmd>bn<CR>", { noremap = true, silent = true })
     vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>", { noremap = true, silent = true, desc = "Close current buffer" })
@@ -93,6 +100,18 @@ return {
       "<leader>bh",
       "<cmd>BufferLineCloseLeft<CR>",
       { noremap = true, silent = true, desc = "Close buffers on the left" }
+    )
+    vim.keymap.set(
+      "n",
+      "<leader>bp",
+      "<cmd>BufferLinePick<CR>",
+      { noremap = true, silent = true, desc = "Go to buffer (Pick)" }
+    )
+    vim.keymap.set(
+      "n",
+      "<leader>be",
+      "<cmd>BufferLinePickClose<CR>",
+      { noremap = true, silent = true, desc = "Close buffer (Pick)" }
     )
   end,
 }

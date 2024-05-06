@@ -49,7 +49,7 @@ vim.cmd("set clipboard+=unnamedplus")
 vim.api.nvim_create_augroup("FileTypeIndentation", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
   group = "FileTypeIndentation",
-  pattern = { "cs", "python" },
+  pattern = { "cs", "python" }, -- I like my indentations to be 4 spaces in csharp and python :)
   callback = function()
     print("Tab is 4 spaces in this file!")
     vim.cmd("setlocal tabstop=4")

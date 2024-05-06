@@ -51,6 +51,8 @@ return {
           -- "<cmd>lua Open_files_and_set_cwd()<CR>"
         ),
         -- dashboard.button("n", " " .. " New file", "<cmd> ene <BAR> startinsert <cr>"),
+        dashboard.button("s", " " .. " Open session", "<cmd>lua require('persistence').load()<CR>"),
+        dashboard.button("l", " " .. " Last session", "<cmd>lua require('persistence').load({ last = true })<CR>"),
         dashboard.button(
           "r",
           " " .. " Recent files",
@@ -63,6 +65,7 @@ return {
           "<cmd>cd C:\\Users\\m7mod\\AppData\\Local\\nvim | edit $MYVIMRC <cr>"
         ),
         dashboard.button("l", "󰒲 " .. " Lazy", "<cmd> Lazy <cr>"),
+        dashboard.button("L", "󰒲 " .. " Lazy", "<cmd> Lazy <cr>"),
         dashboard.button("q", " " .. " Quit", "<cmd> qa <cr>"),
       }
       for _, button in ipairs(dashboard.section.buttons.val) do

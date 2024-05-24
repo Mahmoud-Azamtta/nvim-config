@@ -50,5 +50,9 @@ return {
     vim.keymap.set("n", "<leader>gh", "<cmd>Gitsigns preview_hunk_inline<CR>", opts)
     opts.desc = "Toggle line blame"
     vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", opts)
+    opts.desc = "Reset changes in current buffer"
+    vim.keymap.set("n", "<leader>gR", "<cmd>Gitsigns reset_buffer<CR>", opts)
+    opts.desc = "Reset changes for the hunk under cursor"
+    vim.keymap.set("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<CR>", opts)
   end,
 }

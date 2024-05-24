@@ -44,6 +44,13 @@ return {
         stages = "fade",
         render = "compact",
       })
+
+      vim.keymap.set(
+        "n",
+        "<leader>i",
+        "<cmd>NoiceDismiss<CR>",
+        { noremap = true, silent = true, desc = "Dismiss Noice notifications" }
+      )
     end,
   },
 }

@@ -8,8 +8,8 @@ return {
   opts = {},
   config = function()
     vim.cmd([[
-      highlight WhichKeyFloat guibg=#1c1c1c
-      highlight WhichKeyBorder guibg=#1c1c1c guifg=#282828 
+      highlight WhichKeyFloat guibg=#191919
+      highlight WhichKeyBorder guibg=#191919 guifg=#282828 
     ]])
     local wk = require("which-key")
     wk.register({
@@ -22,20 +22,21 @@ return {
     }, { prefix = "<leader>" })
     wk.setup({
       window = {
-        border = "single",
+        border = "none",
         position = "bottom",
-        margin = { 1, 30, 1, 30 },
-        padding = { 2, 2, 2, 2 },
-        winblend = 10,
+        -- margin = { 1, 30, 1, 30 },
+        -- padding = { 2, 2, 2, 2 },
+        -- winblend = 10,
         zindex = 1000,
       },
       layout = {
-        height = { min = 4, max = 25 },
-        width = { min = 20, max = 50 },
+        -- height = { min = 4, max = 25 },
+        -- width = { min = 20, max = 50 },
         spacing = 3,
         align = "center",
       },
       show_help = true,
+      show_keys = true,
     })
   end,
 }

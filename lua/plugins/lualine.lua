@@ -38,9 +38,9 @@ local lualine_theme = {
     c = { bg = colors.black, fg = colors.darker_white },
   },
   inactive = {
-    a = { bg = colors.inactive_gray, fg = colors.black, gui = "bold" },
-    b = { bg = colors.inactive_gray, fg = colors.darkder_white },
-    c = { bg = colors.inactive_gray, fg = colors.darker_white },
+    a = { bg = colors.black, fg = colors.darkder_white, gui = "bold" },
+    b = { bg = colors.black, fg = colors.darkder_white },
+    c = { bg = colors.black, fg = colors.darker_white },
   },
 }
 
@@ -77,12 +77,11 @@ return {
       },
       sections = {
         lualine_a = {
-          { "mode", separator = { left = "", right = "" } },
+          { "mode" },
         },
         lualine_b = {
-          { "branch", icon = "󰘬", separator = { left = "", right = "" } },
-          { "diff", separator = { left = "", right = "" } },
-          { separator = { left = "", right = "" } },
+          { "branch", icon = "󰘬" },
+          { "diff" },
         },
         lualine_c = {
           "filename",
@@ -98,7 +97,7 @@ return {
         },
         lualine_x = { "fileformat", "filetype" },
         lualine_y = { "progress" },
-        lualine_z = { { getTime, separator = { left = "", right = "" } } },
+        lualine_z = { { getTime } },
       },
     })
   end,

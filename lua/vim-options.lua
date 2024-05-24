@@ -24,11 +24,18 @@ vim.opt.signcolumn = "yes"
 vim.opt.numberwidth = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.pumblend = 10
+-- vim.opt.pumblend = 10
 vim.opt.pumheight = 10
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 20
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+-- [[ folds options ]] --
+-- vim.o.foldcolumn = "1"
+vim.o.foldlevel = 99
+-- vim.o.foldlevelstart = true
+vim.o.foldenable = true
+-- vim.o.fillchars = [[eob: ,fold: ,foldopen:-,foldsep: ,foldclose:+]]
 
 -- [[ Blinking cursor ]] --
 -- vim.opt.guicursor = {

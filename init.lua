@@ -14,14 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("keymaps")
 require("lazy").setup("plugins")
-
-vim.cmd([[
-  highlight Pmenu guibg=#1c1c1c
-  highlight PmenuSbar guibg=#211F1E
-  highlight PmenuThumb guibg=#33302E
-  highlight PmenuSel guibg=#363230 guifg=#ebdbb2
-  highlight NormalFloat guibg=#1c1c1c
-]])
+require("highlights")
 
 -- DO NOT TOUCH ** DANGER **
 vim.cmd([[

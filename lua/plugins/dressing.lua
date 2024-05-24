@@ -14,11 +14,11 @@ return {
     end
   end,
   config = function()
-    vim.cmd([[
-      highlight FloatInputBorder guifg=#7c6f64 guibg=None
-      highlight NormalFloatBG guibg=None
-      highlight FloatInputTitle guibg=None guifg=#f38019
-    ]])
+    -- vim.cmd([[
+    --   highlight FloatInputBorder guifg=#7c6f64 guibg=None
+    --   highlight NormalFloatBG guibg=None
+    --   highlight FloatInputTitle guibg=None guifg=#f38019
+    -- ]])
     local dressing = require("dressing")
     dressing.setup({
       input = {

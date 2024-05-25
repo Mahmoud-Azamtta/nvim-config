@@ -13,10 +13,6 @@ return {
         end
       end,
     })
-    vim.cmd([[
-      highlight BufferLineOffsetSeparator guifg=#282828
-      highlight BufferLineOffsetAreas guifg=#282828
-    ]])
 
     vim.cmd([[
       highlight FileExplorer guibg=none
@@ -25,10 +21,11 @@ return {
     local buffers = require("bufferline")
     buffers.setup({
       options = {
-        separator_style = "thick",
+        separator_style = "thin",
         offsets = {
           {
             filetype = "NvimTree",
+            -- filetype = "neo-tree",
             text = "  Explorer",
             text_align = "center",
             separator = true,
@@ -37,30 +34,33 @@ return {
         },
       },
       highlights = {
-        fill = {
-          bg = "#1c1c1c",
-        },
         background = {
           bg = "#1c1c1c", -- #32302f
+          fg = "#504945",
         },
         buffer_visible = {
-          -- bg = "#282828",
+          fg = "#504945",
           bg = "#1c1c1c",
         },
         separator = {
-          fg = "#282828",
+          fg = "#504945",
           bg = "#1c1c1c",
         },
         separator_selected = {
-          fg = "#282828",
-          bg = "#1c1c1c",
+          fg = "#504945",
+          -- bg = "#1c1c1c",
         },
         separator_visible = {
-          fg = "#282828",
+          fg = "#504945",
+          -- bg = "#1c1c1c",
+        },
+        buffer_selected = {
+          -- undercurl = true,
           bg = "#1c1c1c",
         },
         indicator_selected = {
           fg = "#fe8019",
+          bg = "#1c1c1c",
         },
         indicator_visible = {
           bg = "#1c1c1c",
@@ -71,17 +71,31 @@ return {
         modified_visible = {
           bg = "#1c1c1c",
         },
+        modified_selected = {
+          bg = "#1c1c1c",
+          -- underline = true,
+        },
         close_button = {
           bg = "#1c1c1c",
+          fg = "#504945",
         },
         close_button_visible = {
+          bg = "#1c1c1c",
+          fg = "#504945",
+        },
+        close_button_selected = {
+          bg = "#1c1c1c",
+          -- underline = true,
+        },
+        pick = {
           bg = "#1c1c1c",
         },
         pick_visible = {
           bg = "#1c1c1c",
         },
-        pick = {
+        pick_selected = {
           bg = "#1c1c1c",
+          -- underline = true,
         },
       },
     })

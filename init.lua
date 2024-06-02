@@ -13,7 +13,11 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("keymaps")
-require("lazy").setup("plugins")
+require("lazy").setup({ { import = "core" }, { import = "ui" }, { import = "extras" } }, {
+  checker = {
+    enabled = true,
+  },
+})
 require("highlights")
 
 -- DO NOT TOUCH ** DANGER **

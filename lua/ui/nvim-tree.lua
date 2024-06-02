@@ -18,13 +18,19 @@ return {
       },
       view = {
         width = 40,
+        side = "left",
         signcolumn = "yes",
+        cursorline = true,
       },
       renderer = {
+        root_folder_label = function(cwd)
+          local project_name = cwd:match("([^\\]+)$")
+          return "…\\" .. project_name
+        end,
         group_empty = true,
         indent_markers = {
           enable = true,
-          inline_arrows = true,
+          inline_arrows = false,
           icons = {
             corner = "╰", -- └
             edge = "│",
@@ -34,10 +40,13 @@ return {
           },
         },
         icons = {
+          show = {
+            folder_arrow = false,
+          },
           glyphs = {
             folder = {
-              arrow_closed = "", --
-              arrow_open = "", --
+              arrow_closed = "", -- 
+              arrow_open = "", -- 
             },
           },
         },
@@ -54,4 +63,29 @@ return {
     opts.desc = "Refresh file explorer"
     vim.keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", opts)
   end,
+  -- "nvim-neo-tree/neo-tree.nvim",
+  -- branch = "v3.x",
+  -- dependencies = {
+  --   "nvim-lua/plenary.nvim",
+  --   "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+  --   "MunifTanjim/nui.nvim",
+  --   -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+  -- },
+  -- config = function()
+  --   require("neo-tree").setup({
+  --     popup_border_style = "rounded",
+  --     default_component_configs = {
+  --       filesystem = {
+  --         hijack_netrw_behavior = "open_current",
+  --       },
+  --     },
+  --   })
+  --
+  --   vim.keymap.set(
+  --     "n",
+  --     "<leader>ee",
+  --     "<cmd>Neotree toggle<CR>",
+  --     { noremap = true, silent = true, desc = "File explorer" }
+  --   )
+  -- end,
 }

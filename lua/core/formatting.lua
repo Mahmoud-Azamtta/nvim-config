@@ -15,6 +15,7 @@ return {
         markdown = { "prettier" },
         lua = { "stylua" },
         python = { "isort", "black" },
+        cs = { "csharpier" },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -22,7 +23,7 @@ return {
         timeout_ms = 500,
       },
     })
-    vim.keymap.set({ "n", "v" }, "<leader>mp", function()
+    vim.keymap.set({ "n", "v" }, "<leader>p", function() -- (P)retty: format current buffer
       conform.format({
         lsp_fallback = true,
         async = false,

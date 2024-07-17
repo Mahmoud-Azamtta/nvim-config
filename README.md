@@ -2,6 +2,8 @@
 
 This is my Neovim text editor configuration that I use to write code for all my projects. This configuration repo is managed from scratch I didn't use any distribution.
 
+![My text editor](./assets/Screenshot.png)
+
 ## Installation 🚀
 
 - Install Neovim (I prefer a package manager to install tools and plugins, my package manager of choice is [Scoop](https://scoop.sh/) since I use Windows):

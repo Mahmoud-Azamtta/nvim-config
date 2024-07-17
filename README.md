@@ -5,19 +5,19 @@ This is my Neovim text editor configuration that I use to write code for all my 
 ## Installation 🚀
 
 - Install Neovim (I prefer a package manager to install tools and plugins, my package manager of choice is [Scoop](https://scoop.sh/) since I use Windows):
-  ```powershell
+  ```shell
   scoop bucket add extras
   scoop install extras/neovim
   ```
 - On Windows clang is needed in order for treesitter to work, so you have to install **LLVM**. The easiest way is to use Scoop:
-  ```powershell
+  ```shell
   sccop bucket add main
   scoop install main/llvm
   ```
 - Install [ripgrep ](https://github.com/BurntSushi/ripgrep) and [fzf](https://github.com/junegunn/fzf).
 - Clone the repository and move it to your nvim config directory/folder.
   on Windows this folder is located at `$HOME\AppData\Local\nvim`:
-  ```powershell
+  ```shell
   cd $HOME\AppData\Local
   git clone https://github.com/Mahmoud-Azamtta/nvim-config.git
   ```

@@ -47,6 +47,17 @@ vim.o.foldenable = true
 --   "sm:block-blinkwait175-blinkoff150-blinkon175",
 -- }
 
+local signs = { ERROR = "", WARN = "", HINT = "", INFO = "" }
+
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = "",
+    --   function(diagnostic)
+    --   return signs[vim.diagnostic.severity[diagnostic.severity]]
+    -- end,
+  },
+})
+
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
@@ -58,7 +69,7 @@ vim.api.nvim_create_autocmd("FileType", {
   group = "FileTypeIndentation",
   pattern = { "cs", "python" }, -- I like my indentations to be 4 spaces in csharp and python :)
   callback = function()
-    print("Tab is 4 spaces in this file!")
+    -- print("Tab is 4 spaces in this file!")
     vim.cmd("setlocal tabstop=4")
     vim.cmd("setlocal softtabstop=4")
     vim.cmd("setlocal shiftwidth=4")

@@ -2,7 +2,7 @@ return {
   {
     "sainnhe/gruvbox-material",
     config = function()
-      vim.g.gruvbox_material_foreground = "mix"
+      vim.g.gruvbox_material_foreground = "material"
       vim.g.gruvbox_material_background = "hard"
       vim.g.gruvbox_material_transparent_background = 2
       vim.g.gruvbox_material_enable_italic = 1
@@ -19,8 +19,6 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
       vim.g.everforest_material_foreground = "original"
       vim.g.everforest_material_background = "hard"
       vim.g.everforest_transparent_background = 2
@@ -37,9 +35,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-      vim.g.snonoka_style = ""
+      -- vim.g.snonoka_style = ""
       vim.g.sonokai_material_foreground = "original"
       vim.g.sonokai_material_background = "hard"
       vim.g.sonokai_transparent_background = 1
@@ -56,9 +52,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-      vim.g.edge_style = ""
+      -- vim.g.edge_style = ""
       vim.g.edge_material_foreground = "original"
       vim.g.edge_material_background = "hard"
       vim.g.edge_transparent_background = 1

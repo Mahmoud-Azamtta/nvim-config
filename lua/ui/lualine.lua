@@ -69,7 +69,7 @@ return {
     local lualine = require("lualine")
     lualine.setup({
       options = {
-        theme = lualine_theme,
+        theme = "gruvbox-material",
         disabled_filetypes = { "alpha" },
         globalstatus = true,
         section_separators = { left = "", right = "" }, --   
@@ -96,19 +96,6 @@ return {
           },
         },
         lualine_x = {
-          function()
-            local ok, pomo = pcall(require, "pomo")
-            if not ok then
-              return ""
-            end
-
-            local timer = pomo.get_first_to_finish()
-            if timer == nil then
-              return ""
-            end
-
-            return "󰄉 " .. tostring(timer)
-          end,
           "fileformat",
           "filetype",
         },

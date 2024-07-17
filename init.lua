@@ -13,14 +13,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("keymaps")
-require("lazy").setup({ { import = "core" }, { import = "ui" }, { import = "extras" } }, {
-  checker = {
-    enabled = true,
-  },
-})
+require("lazy").setup({ { import = "core" }, { import = "ui" }, { import = "extras" } }, {})
 require("highlights")
-
--- DO NOT TOUCH ** DANGER **
-vim.cmd([[
-  lua require'nvim-treesitter.install'.compilers = { 'clang' }
-]])

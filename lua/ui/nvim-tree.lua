@@ -48,6 +48,9 @@ return {
               arrow_closed = "", -- 
               arrow_open = "", -- 
             },
+            git = {
+              deleted = "󰍴",
+            },
           },
         },
       },
@@ -62,6 +65,8 @@ return {
     vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", opts)
     opts.desc = "Refresh file explorer"
     vim.keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", opts)
+    opts.desc = "Collapse directories"
+    vim.keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", opts)
   end,
   -- "nvim-neo-tree/neo-tree.nvim",
   -- branch = "v3.x",

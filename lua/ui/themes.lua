@@ -19,8 +19,10 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.g.everforest_material_foreground = "original"
-      vim.g.everforest_material_background = "hard"
+      -- vim.g.everforest_material_foreground = "original"
+      -- vim.g.everforest_material_background = "hard"
+      vim.g.everforest_ui_contrast = "high"
+      vim.g.everforest_background = "hard"
       vim.g.everforest_transparent_background = 2
       vim.g.everforest_enable_italic = 1
       vim.g.everforest_enable_bold = 1

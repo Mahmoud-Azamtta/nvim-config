@@ -16,6 +16,7 @@ vim.g.clipboard = {
 vim.o.shell = "pwsh.exe"
 vim.o.shellcmdflag = "-c"
 
+-- vim.opt.conceallevel = 1
 vim.opt.fillchars = { eob = " " }
 vim.opt.wrap = true
 vim.opt.termguicolors = true

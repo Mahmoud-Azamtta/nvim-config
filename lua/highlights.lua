@@ -28,8 +28,8 @@ vim.cmd([[
 
 -- NvimTree Highlights
 vim.cmd([[
-  highlight NvimTreeFolderName guifg=#8ec07c
-  highlight NvimTreeNormal guifg=#bdae93
+  " highlight NvimTreeFolderName guifg=#8ec07c
+  " highlight NvimTreeNormal guifg=#bdae93
   " highlight NvimTreeMarkdownFile guifg=#bdae93 
 ]])
 

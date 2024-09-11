@@ -69,7 +69,7 @@ return {
     local lualine = require("lualine")
     lualine.setup({
       options = {
-        theme = "gruvbox-material",
+        theme = lualine_theme, --"gruvbox-material",
         disabled_filetypes = { "alpha" },
         globalstatus = true,
         section_separators = { left = "", right = "" }, --   
